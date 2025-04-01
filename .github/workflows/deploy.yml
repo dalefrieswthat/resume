@@ -16,10 +16,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Cache TeXLive
+        uses: actions/cache@v4
+        with:
+          path: |
+            /usr/local/texlive
+            ~/.texlive
+          key: ${{ runner.os }}-texlive-${{ hashFiles('Dale_Yarborough_Resume.tex') }}
+          restore-keys: |
+            ${{ runner.os }}-texlive-
+
       - name: Install TeXLive
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-fonts-recommended \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-extra \
+            texlive-pictures \
+            texlive-science \
+            texlive-bibtex-extra \
+            latexmk
 
       - name: Build Resume
         run: |
