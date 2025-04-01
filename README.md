@@ -1,19 +1,42 @@
-# Dale Yarborough – Resume
+# Resume
 
-This repository contains my professional resume in LaTeX format, along with automation scripts and a GitHub Actions workflow to build the PDF on every update.
+My professional resume, built with LaTeX and automatically deployed to GitHub Pages.
 
-## ✍️ About Me
-DevOps Engineer and Full Stack Developer with 6+ years of experience across cloud-native tools, automation, CI/CD, and observability. Creator of [Kubed](https://github.com/dalefrieswthat/kubed), a CLI tool that enhances developer productivity for Docker, Kubernetes, Terraform, and Helm.
+## View Online
 
-## 📄 Resume
-- [Download PDF](./Dale_Yarborough_Resume.pdf)
-- [View LaTeX Source](./Dale_Yarborough_Resume.tex)
+Visit [resume.daleyarborough.com](https://resume.daleyarborough.com) to view the latest version.
 
-## ⚙️ Tools
-- `Makefile` for local builds (`make resume`)
-- GitHub Actions to automatically build on push
+## Local Development
 
-## 📬 Contact
-- GitHub: [dalefrieswthat](https://github.com/dalefrieswthat)
-- LinkedIn: [daleyarborough](https://www.linkedin.com/in/daleyarborough/)
-- Email: daleyarborough@gmail.com
+To build the resume locally:
+
+1. Install TeXLive:
+   ```bash
+   # macOS
+   brew install --cask mactex
+   
+   # Ubuntu/Debian
+   sudo apt-get install texlive-full
+   ```
+
+2. Build the PDF:
+   ```bash
+   make resume
+   ```
+
+## Deployment
+
+The resume is automatically built and deployed to GitHub Pages when changes are pushed to the main branch.
+
+## Custom Domain Setup
+
+1. Configure your DNS provider with the following records:
+   ```
+   Type  Name                     Value
+   A     resume.daleyarborough.com  185.199.108.153
+   A     resume.daleyarborough.com  185.199.109.153
+   A     resume.daleyarborough.com  185.199.110.153
+   A     resume.daleyarborough.com  185.199.111.153
+   ```
+
+2. The CNAME file in this repository will handle the GitHub Pages configuration.
