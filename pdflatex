@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.85]{geometry}
+\usepackage{multicol}
+
+% Personal data
+\name{Dale}{Yarborough}
+\title{DevOps Engineer | Software Developer}
+\address{Austin, TX}{USA}
+\phone[mobile]{919-830-5771}
+\email{daleyarborough@gmail.com}
+\homepage{github.com/dalefrieswthat/kubed}
+\social[linkedin]{daleyarborough}
+
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\makecvtitle
+
+\section{Summary}
+DevOps Engineer and Full Stack Developer with 6+ years of experience building scalable, cloud-native applications and infrastructure in AWS, Azure, and hybrid environments. Proven ability to lead automation initiatives, optimize deployment pipelines, and deliver highly available services. Creator of Kubed, an open-source CLI tool improving DevOps workflows.
+
+\section{Skills}
+\cvitem{Languages}{Python, Java}
+\cvitem{Cloud Platforms}{AWS, Azure, GCP, DigitalOcean}
+\cvitem{IaC Tools}{Terraform, Terragrunt, AWS CDK, Helm}
+\cvitem{CI/CD}{GitHub Actions, GitLab CI, Argo CD}
+\cvitem{Monitoring}{Datadog, Splunk, Grafana}
+\cvitem{Containers}{Docker, Kubernetes}
+
+\section{Work Experience}
+\cventry{Aug 2021 -- Present}{Full Stack Software Engineer}{General Motors}{Austin, TX}{}{
+\begin{itemize}
+  \item Migrated Spring Boot apps from on-prem and PCF to Azure using Docker, Terraform, and Helm.
+  \item Built GitHub Actions + Argo CD pipelines for AKS, improving deployment automation.
+  \item Developed Backstage templates to onboard domain teams to GM's Atmos platform.
+  \item Engineered Java microservices for real-time data ingestion from BrightDrop IoT devices.
+  \item Built React dashboards for fleet data visualization (recalls, orders).
+\end{itemize}
+}
+
+\cventry{Dec 2019 -- Aug 2021}{Software Engineer}{Whole Foods Market}{Austin, TX}{}{
+\begin{itemize}
+  \item Created documentation & architecture diagrams of HA AWS environments using AWS CDK.
+  \item Implemented structured logging in AWS Lambdas and .NET services for observability.
+  \item Developed forecasting app to monitor inventory across US, UK, and Canada stores.
+  \item Deployed Dockerized services via GitLab CI to AWS ECR and EC2 IIS.
+  \item Built Datadog dashboards for SLA monitoring and executive insights.
+\end{itemize}
+}
+
+\cventry{Aug 2018 -- Nov 2019}{Software Engineer}{Charles Schwab}{Austin, TX}{}{
+\begin{itemize}
+  \item Developed C# .NET MVC app managing $60M+ budget for Advisor Services.
+  \item Integrated IBM Tone Analyzer API to perform sentiment analysis on call center audio.
+  \item Built a developer productivity dashboard using Alteryx and Jira API integration.
+\end{itemize}
+}
+
+\section{Open Source Projects}
+\cvitem{Kubed}{CLI tool for Docker, Kubernetes, Terraform, and Helm productivity. Includes autocompletion and install scripts. \newline GitHub: \texttt{github.com/dalefrieswthat/kubed}}
+
+\section{Education}
+\cventry{May 2018}{B.S. in Computer Information Systems}{Appalachian State University}{Boone, NC}{}{}
+
+\section{Certifications}
+\cvitem{AWS}{Solutions Architect (2020), Cloud Practitioner (2019), Developer Associate (2018)}
+\cvitem{Azure}{AZ-900, AI Fundamentals, Data Fundamentals (2022)}
+\cvitem{Membership}{AWS Community Builder (2021 – Present)}
+
+\end{document}

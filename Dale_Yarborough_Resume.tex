@@ -1,0 +1,189 @@
+%-------------------------
+% Resume in LateX
+% Author : Dale Yarborough
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\footskip}{5pt}
+\setlength{\itemsep}{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Dale Yarborough} & Email: \href{mailto:daleyarborough@gmail.com}{daleyarborough@gmail.com}\\
+  \href{https://github.com/dale-yarborough}{\faGithub\ dale-yarborough} \textbullet{} \href{https://linkedin.com/in/daleyarborough}{\faLinkedin\ daleyarborough} & Mobile: \href{tel:+19198305771}{919-830-5771} \\
+  Austin, TX & \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {General Motors}{Austin, TX}
+      {Software Engineer}{2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Cloud Migration}
+          {Led migration of 300+ Spring Boot applications to Azure AKS, reducing infrastructure costs and improving scalability}
+        \resumeItem{CI/CD Pipeline}
+          {Built enterprise CI/CD pipelines using GitHub Actions and Argo CD, reducing deployment time and increasing reliability}
+        \resumeItem{Developer Platform}
+          {Created internal developer platform with Backstage, enabling self-service capabilities for tenant developers and reducing onboarding time by over 70\%}   
+        \resumeItem{IoT Pipeline}
+          {Implemented IoT data pipeline processing events using Java microservices and event-driven architecture}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Whole Foods Market}{Austin, TX}
+      {Backend Software Engineer}{2019 -- 2021}
+      \resumeItemListStart
+        \resumeItem{AWS Infrastructure}
+          {Designed and built AWS infrastructure using CDK, while ensuring 99.99\% uptime}
+        \resumeItem{Monitoring System}
+          {Implemented centralized logging and monitoring for Lambda functions, reducing debugging time and improving system reliability}
+        \resumeItem{Inventory Management}
+          {Developed and deployed inventory management system for 500+ stores, improving accuracy and reducing stockouts}
+        \resumeItem{Containerization}
+          {Containerized .NET Core microservices using Docker and AWS ECR, reducing deployment time by 40\% and improving consistency}
+        \resumeItem{Documentation}
+          {Created comprehensive AWS architecture documentation using Confluence and LucidChart, improving team onboarding and system understanding}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Charles Schwab}{Austin, TX}
+      {Software Developer}{2018 -- 2019}
+      \resumeItemListStart
+        \resumeItem{Financial Operations}
+          {Built high-availability .NET application managing \$60M+ in daily financial operations with zero downtime}
+        \resumeItem{Engineering Metrics}
+          {Created engineering metrics dashboard using Jira API, increasing team velocity and improving project visibility}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE-----------------
+\section{Open Source}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kubed}{GitHub}
+      {Creator \& Maintainer}{2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{CLI Tool}
+          {Developed a productivity-focused CLI tool with autocompletion for Docker, Terraform, Helm, and Kubernetes commands}
+        \resumeItem{Developer Experience}
+          {Enhanced terminal workflow with intelligent aliases and improved help output, reducing command memorization}
+        \resumeItem{Cross-Platform}
+          {Built with cross-platform support for macOS and Linux, ensuring consistent developer experience}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, Java, C\#, JavaScript, TypeScript}
+      \hfill
+      \textbf{Frameworks}{: Spring Boot, .NET Core, React}
+    }
+    \item{
+      \textbf{Cloud \& DevOps}{: AWS (Solutions Architect Associate), Azure, Kubernetes, Docker, Terraform, AWS CDK}
+      \hfill
+      \textbf{Tools}{: GitHub Actions, Argo CD, Datadog, Git, Unix}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Appalachian State University}{Boone, NC}
+      {B.S. Computer Information Systems}{2018}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{AWS}{: Solutions Architect Associate, Developer Associate, Community Builder (2021 - present)}
+      \hfill
+      \textbf{Microsoft Azure}{ Data Fundamentals, AI Fundamentals}
+    }
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
